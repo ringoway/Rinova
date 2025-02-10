@@ -1,5 +1,6 @@
 package com.ringo.rinova;
 
+import com.ringo.rinova.core.registry.RCreativeTabs;
 import com.ringo.rinova.core.registry.RItems;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
@@ -21,18 +22,12 @@ public class RinovaMod {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         modEventBus.addListener(this::commonSetup);
-        modEventBus.addListener(this::addCreative);
 
         //Регистрация предметов
         RItems.register(modEventBus);
+        RCreativeTabs.register(modEventBus);
 
         MinecraftForge.EVENT_BUS.register(this);
-    }
-
-    private void addCreative(BuildCreativeModeTabContentsEvent event) {
-        if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
-            event.accept(RItems.PINKYLITE_CRYSTAL.get());
-        }
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {
