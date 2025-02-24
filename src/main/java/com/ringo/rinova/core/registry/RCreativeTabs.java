@@ -17,6 +17,7 @@ public class RCreativeTabs {
             .icon(() -> RItems.PINKYLITE_CRYSTAL.get().getDefaultInstance())
             .title(Component.translatable("creative_tab.rinova.tab"))
             .displayItems((parameters, output) -> {
+                //Так же добавляет и блоки, так как мы регистрируем блоки, как предметы через написанные методы
                 RItems.ITEMS.getEntries().forEach(item -> output.accept(item.get()));
             }).build());
 

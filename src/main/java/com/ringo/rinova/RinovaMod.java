@@ -1,5 +1,6 @@
 package com.ringo.rinova;
 
+import com.ringo.rinova.core.registry.RBlocks;
 import com.ringo.rinova.core.registry.RCreativeTabs;
 import com.ringo.rinova.core.registry.RItems;
 import net.minecraft.world.item.CreativeModeTabs;
@@ -25,6 +26,7 @@ public class RinovaMod {
 
         //Регистрация предметов
         RItems.register(modEventBus);
+        RBlocks.register(modEventBus);
         RCreativeTabs.register(modEventBus);
 
         MinecraftForge.EVENT_BUS.register(this);
