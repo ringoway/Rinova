@@ -1,5 +1,7 @@
 {
   "item.rinova.pinkylite_crystal": "Пинкилитовый кристалл",
   "block.rinova.pinkylite_crystal_block": "Пинкилитовый кристалльный блок",
+  "block.rinova.pinkylite_ore": "Пинкилитовая руда",
+  "block.rinova.deepslate_pinkylite_ore": "Глубинная пинкилитовая руда",
   "creative_tab.rinova.tab": "Rinova"
 }

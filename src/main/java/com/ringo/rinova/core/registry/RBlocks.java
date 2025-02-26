@@ -1,10 +1,11 @@
 package com.ringo.rinova.core.registry;
 
 import com.ringo.rinova.RinovaMod;
+import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.DropExperienceBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
@@ -28,6 +29,14 @@ public class RBlocks {
                     .strength(4.0f, 5.0f)
                     .lightLevel(state -> 3)
                     .instrument(NoteBlockInstrument.BIT)));
+
+    public static final RegistryObject<Block> PINKYLITE_ORE = registerBlock("pinkylite_ore",
+            () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(PINKYLITE_CRYSTAL_BLOCK.get())
+                    .strength(3.0f), UniformInt.of(3, 7)));
+
+    public static final RegistryObject<Block> DEEPSLATE_PINKYLITE_ORE = registerBlock("deepslate_pinkylite_ore",
+            () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(PINKYLITE_CRYSTAL_BLOCK.get())
+                    .strength(4.5f), UniformInt.of(4, 8)));
 
     public static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> registryObject = BLOCKS.register(name, block);
