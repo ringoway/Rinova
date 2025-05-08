@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "b": {
+      "item": "minecraft:basalt"
+    },
+    "o": {
+      "item": "minecraft:obsidian"
+    }
+  },
+  "pattern": [
+    "bo",
+    "bo",
+    "bo"
+  ],
+  "result": {
+    "count": 6,
+    "item": "rinova:vultan_rods"
+  }
+}

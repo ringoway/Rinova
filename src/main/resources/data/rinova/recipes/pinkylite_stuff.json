@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "p": {
+      "item": "rinova:pinkylite_crystal"
+    },
+    "v": {
+      "item": "rinova:vultan_rods"
+    }
+  },
+  "pattern": [
+    "  p",
+    " v ",
+    "v  "
+  ],
+  "result": {
+    "item": "rinova:pinkylite_stuff"
+  }
+}
