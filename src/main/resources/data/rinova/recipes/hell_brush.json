@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "f": {
+      "item": "minecraft:feather"
+    },
+    "d": {
+      "item": "minecraft:diamond"
+    },
+    "v": {
+      "item": "rinova:vultan_rods"
+    }
+  },
+  "pattern": [
+    "f",
+    "d",
+    "v"
+  ],
+  "result": {
+    "item": "rinova:hell_brush"
+  }
+}

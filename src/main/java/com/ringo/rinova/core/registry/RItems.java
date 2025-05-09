@@ -1,6 +1,7 @@
 package com.ringo.rinova.core.registry;
 
 import com.ringo.rinova.RinovaMod;
+import com.ringo.rinova.common.item.HellBrushItem;
 import com.ringo.rinova.common.item.PinkiliteStaffItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
@@ -20,6 +21,8 @@ public class RItems {
 
     public static final RegistryObject<Item> PINKYLITE_STUFF = registerItem("pinkylite_stuff",
             () -> new PinkiliteStaffItem(new Item.Properties()));
+    public static final RegistryObject<Item> HELL_BRUSH = registerItem("hell_brush",
+            () -> new HellBrushItem(new Item.Properties()));
 
     private static <T extends Item> RegistryObject<T> registerItem(String id, Supplier<T> item) {
         return ITEMS.register(id, item);
