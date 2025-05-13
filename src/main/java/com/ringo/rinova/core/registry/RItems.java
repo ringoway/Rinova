@@ -1,10 +1,10 @@
 package com.ringo.rinova.core.registry;
 
 import com.ringo.rinova.RinovaMod;
+import com.ringo.rinova.common.item.CrystalGraceItem;
 import com.ringo.rinova.common.item.HellBrushItem;
 import com.ringo.rinova.common.item.PinkiliteStaffItem;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.level.block.Block;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -23,6 +23,8 @@ public class RItems {
             () -> new PinkiliteStaffItem(new Item.Properties()));
     public static final RegistryObject<Item> HELL_BRUSH = registerItem("hell_brush",
             () -> new HellBrushItem(new Item.Properties()));
+    public static final RegistryObject<Item> CRYSTAL_GRACE = registerItem("crystal_of_grace",
+            () -> new CrystalGraceItem(new Item.Properties()));
 
     private static <T extends Item> RegistryObject<T> registerItem(String id, Supplier<T> item) {
         return ITEMS.register(id, item);
