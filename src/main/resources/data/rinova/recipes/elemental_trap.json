@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "a": {
+      "item": "minecraft:golden_apple"
+    },
+    "m": {
+      "item": "minecraft:magma_cream"
+    },
+    "p": {
+      "item": "rinova:pinkylite_crystal_block"
+    }
+  },
+  "pattern": [
+    "mam",
+    "apa",
+    "mam"
+  ],
+  "result": {
+    "item": "rinova:elemental_trap"
+  }
+}

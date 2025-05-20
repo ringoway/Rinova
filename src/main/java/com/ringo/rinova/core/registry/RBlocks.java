@@ -1,6 +1,7 @@
 package com.ringo.rinova.core.registry;
 
 import com.ringo.rinova.RinovaMod;
+import com.ringo.rinova.common.block.ElementalTrapBlock;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -37,6 +38,9 @@ public class RBlocks {
     public static final RegistryObject<Block> DEEPSLATE_PINKYLITE_ORE = registerBlock("deepslate_pinkylite_ore",
             () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(PINKYLITE_CRYSTAL_BLOCK.get())
                     .strength(4.5f), UniformInt.of(4, 8)));
+
+    public static final RegistryObject<Block> ELEMENTAL_TRAP = registerBlock("elemental_trap",
+            ElementalTrapBlock::new);
 
     public static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> registryObject = BLOCKS.register(name, block);
