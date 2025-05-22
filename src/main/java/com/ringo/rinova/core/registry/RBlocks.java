@@ -2,6 +2,7 @@ package com.ringo.rinova.core.registry;
 
 import com.ringo.rinova.RinovaMod;
 import com.ringo.rinova.common.block.ElementalTrapBlock;
+import com.ringo.rinova.common.block.SpringTrapBlock;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -41,6 +42,8 @@ public class RBlocks {
 
     public static final RegistryObject<Block> ELEMENTAL_TRAP = registerBlock("elemental_trap",
             ElementalTrapBlock::new);
+    public static final RegistryObject<Block> SPRING_TRAP = registerBlock("spring_trap",
+            SpringTrapBlock::new);
 
     public static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> registryObject = BLOCKS.register(name, block);
