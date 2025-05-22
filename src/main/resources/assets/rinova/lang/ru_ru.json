@@ -8,7 +8,11 @@
   "creative_tab.rinova.tab": "Rinova",
 
   "item.rinova.vultan_rods": "Вултановый стержень",
+
   "item.rinova.pinkylite_stuff": "Пинкилитовый посох",
+  "item.rinova.pinkylite_stuff.tooltip": "Магия регенерации",
+  "item.rinova.pinkylite_stuff.tooltip.charges": "Заряды: %d",
+
   "item.rinova.hell_brush": "Адская кисточка",
   "item.rinova.crystal_of_grace": "Кристалл благодати"
 }

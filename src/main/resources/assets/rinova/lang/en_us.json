@@ -8,7 +8,11 @@
   "creative_tab.rinova.tab": "Rinova",
 
   "item.rinova.vultan_rods": "Vultan rods",
+
   "item.rinova.pinkylite_stuff": "Pinkylite stuff",
+  "item.rinova.pinkylite_stuff.tooltip": "Regeneration magic",
+  "item.rinova.pinkylite_stuff.tooltip.charges": "Charges: %d",
+
   "item.rinova.hell_brush": "Hell brush",
   "item.rinova.crystal_of_grace": "Crystal of grace"
 }
