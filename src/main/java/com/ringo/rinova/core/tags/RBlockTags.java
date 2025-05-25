@@ -13,7 +13,7 @@ public class RBlockTags {
     // Вспомогательный метод для создания тегов
     private static TagKey<Block> tag(String name) {
         return BlockTags.create(
-                new ResourceLocation(RinovaMod.MOD_ID, name)
+                ResourceLocation.fromNamespaceAndPath(RinovaMod.MOD_ID, name)
         );
     }
 }
