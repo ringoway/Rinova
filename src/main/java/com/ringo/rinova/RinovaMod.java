@@ -19,8 +19,9 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 public class RinovaMod {
     public static final String MOD_ID = "rinova";
 
-    public RinovaMod() {
-        IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+    public RinovaMod(FMLJavaModLoadingContext context) {
+        //Стало:
+        IEventBus modEventBus = context.getModEventBus();
 
         modEventBus.addListener(this::commonSetup);
 
