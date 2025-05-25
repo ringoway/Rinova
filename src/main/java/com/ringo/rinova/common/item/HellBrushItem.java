@@ -1,5 +1,6 @@
 package com.ringo.rinova.common.item;
 
+import com.ringo.rinova.core.tags.RBlockTags;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.sounds.SoundEvents;
@@ -37,8 +38,8 @@ public class HellBrushItem extends Item {
             BlockState state = level.getBlockState(pos);
             InteractionHand hand = context.getHand();
 
-            // Камень → Незерак
-            if (state.is(Blocks.STONE)) {
+            // Камень, гранит, андезит, диорит → Незерак
+            if (state.is(RBlockTags.STONE_ROCKS)) {
                 level.setBlock(pos, Blocks.NETHERRACK.defaultBlockState(), 3);
                 stack.hurtAndBreak(1, player, (p) -> p.broadcastBreakEvent(hand));
                 return InteractionResult.SUCCESS;
