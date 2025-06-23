@@ -2,8 +2,7 @@
   "type": "minecraft:smelting",
   "category": "misc",
   "cookingtime": 200,
-  "experience": 1.0,
-  "group": "pinkylite",
+  "experience": 2.5,
   "ingredient": [
     {
       "item": "rinova:pinkylite_ore"
@@ -12,8 +11,5 @@
       "item": "rinova:deepslate_pinkylite_ore"
     }
   ],
-  "result": {
-    "item": "rinova:pinkylite_crystal",
-    "count": 2
-  }
+  "result": "rinova:pinkylite_crystal"
 }
