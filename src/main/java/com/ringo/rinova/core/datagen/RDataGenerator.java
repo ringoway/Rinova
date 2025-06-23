@@ -1,8 +1,9 @@
 package com.ringo.rinova.core.datagen;
 
 import com.ringo.rinova.RinovaMod;
-import com.ringo.rinova.core.datagen.providers.RBlockStateProvider;
-import com.ringo.rinova.core.datagen.providers.RItemModelProvider;
+import com.ringo.rinova.core.datagen.providers.models.RBlockStateProvider;
+import com.ringo.rinova.core.datagen.providers.models.RItemModelProvider;
+import com.ringo.rinova.core.datagen.providers.recipe.RRecipeProvider;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;
@@ -39,8 +40,10 @@ public class RDataGenerator {
         generator.addProvider(true, new RBlockStateProvider(packOutput, existingFileHelper));
         generator.addProvider(true, new RItemModelProvider(packOutput, existingFileHelper));
     }
+
+    // Тут серверные генераторы данных
     private static void addServerProviders(DataGenerator generator, PackOutput packOutput,
                                            CompletableFuture<HolderLookup.Provider> lookupProvider, ExistingFileHelper existingFileHelper) {
-        // Тут серверные генераторы данных
+        generator.addProvider(true, new RRecipeProvider(packOutput));
     }
 }

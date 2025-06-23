@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "rinova:crafting/hell_brush"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_vultan_rods": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "rinova:vultan_rods"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_vultan_rods",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "rinova:crafting/hell_brush"
+    ]
+  },
+  "sends_telemetry_event": false
+}

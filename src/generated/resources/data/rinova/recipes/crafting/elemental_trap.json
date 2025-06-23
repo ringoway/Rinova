@@ -19,5 +19,6 @@
   ],
   "result": {
     "item": "rinova:elemental_trap"
-  }
+  },
+  "show_notification": true
 }

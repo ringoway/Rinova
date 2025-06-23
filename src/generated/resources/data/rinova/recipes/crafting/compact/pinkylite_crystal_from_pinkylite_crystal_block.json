@@ -2,14 +2,14 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "p": {
+    "c": {
       "item": "rinova:pinkylite_crystal"
     }
   },
   "pattern": [
-    "ppp",
-    "ppp",
-    "ppp"
+    "ccc",
+    "ccc",
+    "ccc"
   ],
   "result": {
     "item": "rinova:pinkylite_crystal_block"

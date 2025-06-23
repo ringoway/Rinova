@@ -1,4 +1,4 @@
-package com.ringo.rinova.core.datagen.providers;
+package com.ringo.rinova.core.datagen.providers.models;
 
 import com.ringo.rinova.RinovaMod;
 import com.ringo.rinova.core.registry.RItems;

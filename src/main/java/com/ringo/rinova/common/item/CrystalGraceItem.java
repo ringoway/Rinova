@@ -30,6 +30,7 @@ public class CrystalGraceItem extends Item {
 
     @Override
     public void onInventoryTick(ItemStack stack, Level level, Player player, int slotIndex, int selectedIndex) {
+        super.onInventoryTick(stack, level, player, slotIndex, selectedIndex);
         // Проверка: предмет в активной руке или второй руке
         if (slotIndex != selectedIndex && slotIndex != 40) return;
 
