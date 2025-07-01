@@ -4,6 +4,8 @@ import com.ringo.rinova.RinovaMod;
 import com.ringo.rinova.core.datagen.providers.models.RBlockStateProvider;
 import com.ringo.rinova.core.datagen.providers.models.RItemModelProvider;
 import com.ringo.rinova.core.datagen.providers.recipe.RRecipeProvider;
+import com.ringo.rinova.core.datagen.providers.tags.RBlockTagsProvider;
+import com.ringo.rinova.core.datagen.providers.tags.RItemTagsProvider;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;
@@ -44,6 +46,15 @@ public class RDataGenerator {
     // Тут серверные генераторы данных
     private static void addServerProviders(DataGenerator generator, PackOutput packOutput,
                                            CompletableFuture<HolderLookup.Provider> lookupProvider, ExistingFileHelper existingFileHelper) {
+        // Генерация рецептов
         generator.addProvider(true, new RRecipeProvider(packOutput));
+
+        // Генерация тегов блоков и предметов
+        RBlockTagsProvider blockTagGenerator = generator.addProvider(true,
+                new RBlockTagsProvider(packOutput, lookupProvider, existingFileHelper));
+
+        generator.addProvider(true,
+                new RItemTagsProvider(packOutput, lookupProvider,
+                        blockTagGenerator.contentsGetter(), existingFileHelper));
     }
 }
