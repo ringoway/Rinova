@@ -19,7 +19,7 @@ public class ElementalTrapBlock extends Block {
         super(BlockBehaviour.Properties
                 .copy(RBlocks.PINKYLITE_CRYSTAL_BLOCK.get())
                 .speedFactor(0.8f)
-                .strength(10.f, 1200.0f));
+                .strength(4.0f, 1200.0f)); //поправил, так как долго копалось
     }
 
     @Override
