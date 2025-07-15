@@ -1,6 +1,8 @@
 package com.ringo.rinova.core.datagen;
 
 import com.ringo.rinova.RinovaMod;
+import com.ringo.rinova.core.datagen.providers.lang.REnglishLangProvider;
+import com.ringo.rinova.core.datagen.providers.lang.RRussianLangProvider;
 import com.ringo.rinova.core.datagen.providers.loot.RBlockLootProvider;
 import com.ringo.rinova.core.datagen.providers.models.RBlockStateProvider;
 import com.ringo.rinova.core.datagen.providers.models.RItemModelProvider;
@@ -46,6 +48,10 @@ public class RDataGenerator {
         // Модели блоков и предметов
         generator.addProvider(true, new RBlockStateProvider(packOutput, existingFileHelper));
         generator.addProvider(true, new RItemModelProvider(packOutput, existingFileHelper));
+
+        // Перевод языков (Языковые провайдеры - тоже клиентские!)
+        generator.addProvider(true, new REnglishLangProvider(packOutput));
+        generator.addProvider(true, new RRussianLangProvider(packOutput));
     }
 
     // Тут серверные генераторы данных
