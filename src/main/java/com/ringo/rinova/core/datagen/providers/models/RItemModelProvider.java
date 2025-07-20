@@ -22,7 +22,9 @@ public class RItemModelProvider extends ItemModelProvider {
         basicItem(RItems.CRYSTAL_GRACE.get());
 
         handheldItem(RItems.PINKYLITE_STUFF);
-        handheldItem(RItems.HELL_BRUSH);;
+        handheldItem(RItems.HELL_BRUSH);
+
+        basicItem(RItems.HEART_WITHER.get());
     }
 
     private ItemModelBuilder handheldItem(RegistryObject<Item> item) {

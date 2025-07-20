@@ -4,6 +4,7 @@ import com.ringo.rinova.RinovaMod;
 import com.ringo.rinova.core.datagen.providers.lang.REnglishLangProvider;
 import com.ringo.rinova.core.datagen.providers.lang.RRussianLangProvider;
 import com.ringo.rinova.core.datagen.providers.loot.RBlockLootProvider;
+import com.ringo.rinova.core.datagen.providers.loot.RGlobalLootModifiersProvider;
 import com.ringo.rinova.core.datagen.providers.models.RBlockStateProvider;
 import com.ringo.rinova.core.datagen.providers.models.RItemModelProvider;
 import com.ringo.rinova.core.datagen.providers.recipe.RRecipeProvider;
@@ -63,6 +64,9 @@ public class RDataGenerator {
         // Генерация лут-таблиц
         generator.addProvider(true, new LootTableProvider(packOutput, Set.of(), List.of(
                 new LootTableProvider.SubProviderEntry(RBlockLootProvider::new, LootContextParamSets.BLOCK))));
+
+        // Генерация глобальных модификаторов лута
+        generator.addProvider(true, new RGlobalLootModifiersProvider(packOutput));
 
         // Генерация тегов блоков и предметов
         RBlockTagsProvider blockTagGenerator = generator.addProvider(true,
