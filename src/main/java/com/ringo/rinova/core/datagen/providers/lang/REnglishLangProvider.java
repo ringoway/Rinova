@@ -20,6 +20,7 @@ public class REnglishLangProvider extends RLangProvider {
         addItem(RItems.VULTAN_RODS, "Vultan rods");
         addItem(RItems.HELL_BRUSH, "Hell brush");
         addItem(RItems.CRYSTAL_GRACE, "Crystal of grace");
+        addItem(RItems.HEART_WITHER, "Heart of the Wither");
 
         // Предмет с подсказкой
         addItem(RItems.PINKYLITE_STUFF, "Pinkylite stuff");

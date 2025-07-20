@@ -21,6 +21,7 @@ public class RRussianLangProvider extends RLangProvider {
         addItem(RItems.VULTAN_RODS, "Вултановый стержень");
         addItem(RItems.HELL_BRUSH, "Адская кисточка");
         addItem(RItems.CRYSTAL_GRACE, "Кристалл благодати");
+        addItem(RItems.HEART_WITHER, "Сердце Иссушителя");
 
         // Предмет с подсказкой
         addItem(RItems.PINKYLITE_STUFF, "Пинкилитовый посох");

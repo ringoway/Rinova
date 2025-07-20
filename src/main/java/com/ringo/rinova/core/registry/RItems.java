@@ -25,6 +25,8 @@ public class RItems {
             () -> new HellBrushItem(new Item.Properties()));
     public static final RegistryObject<Item> CRYSTAL_GRACE = registerItem("crystal_of_grace",
             () -> new CrystalGraceItem(new Item.Properties()));
+    public static final RegistryObject<Item> HEART_WITHER = registerItem("heart_wither",
+            () -> new CrystalGraceItem(new Item.Properties()));
 
     private static <T extends Item> RegistryObject<T> registerItem(String id, Supplier<T> item) {
         return ITEMS.register(id, item);

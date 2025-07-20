@@ -3,6 +3,7 @@ package com.ringo.rinova;
 import com.ringo.rinova.core.registry.RBlocks;
 import com.ringo.rinova.core.registry.RCreativeTabs;
 import com.ringo.rinova.core.registry.RItems;
+import com.ringo.rinova.core.registry.RLootModifiers;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -27,8 +28,12 @@ public class RinovaMod {
 
         //Регистрация предметов
         RItems.register(modEventBus);
+        //Регистрация блоков
         RBlocks.register(modEventBus);
+        //Регистрация вкладок
         RCreativeTabs.register(modEventBus);
+        //Регистрация лут модификаторов
+        RLootModifiers.register(modEventBus);
 
         MinecraftForge.EVENT_BUS.register(this);
     }
