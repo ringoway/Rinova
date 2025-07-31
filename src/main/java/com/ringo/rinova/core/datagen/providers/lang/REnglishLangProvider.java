@@ -17,9 +17,15 @@ public class REnglishLangProvider extends RLangProvider {
 
         // Предметы
         addItem(RItems.PINKYLITE_CRYSTAL, "Pinkylite crystal");
+        addItem(RItems.PINKYLITE_CRYSTAL_FRAGMENT, "Pinkylite crystal fragment");
         addItem(RItems.VULTAN_RODS, "Vultan rods");
         addItem(RItems.HELL_BRUSH, "Hell brush");
         addItem(RItems.CRYSTAL_GRACE, "Crystal of grace");
+
+        // Еда
+        addItem(RItems.RAW_GOAT_MEAT, "Raw goat meat");
+        addItem(RItems.COOKED_GOAT_MEAT, "Cooked goat meat");
+        addItem(RItems.PINKYLITE_CARROT, "Pinkylite carrot");
         addItem(RItems.HEART_WITHER, "Heart of the Wither");
 
         // Предмет с подсказкой

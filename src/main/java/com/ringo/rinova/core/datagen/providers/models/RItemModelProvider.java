@@ -18,12 +18,16 @@ public class RItemModelProvider extends ItemModelProvider {
     @Override
     protected void registerModels() {
         basicItem(RItems.PINKYLITE_CRYSTAL.get());
+        basicItem(RItems.PINKYLITE_CRYSTAL_FRAGMENT.get());
         basicItem(RItems.VULTAN_RODS.get());
         basicItem(RItems.CRYSTAL_GRACE.get());
 
         handheldItem(RItems.PINKYLITE_STUFF);
         handheldItem(RItems.HELL_BRUSH);
 
+        basicItem(RItems.RAW_GOAT_MEAT.get());
+        basicItem(RItems.COOKED_GOAT_MEAT.get());
+        basicItem(RItems.PINKYLITE_CARROT.get());
         basicItem(RItems.HEART_WITHER.get());
     }
 
