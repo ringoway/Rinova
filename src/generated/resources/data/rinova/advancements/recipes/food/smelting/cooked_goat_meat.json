@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_raw_goat_meat": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "rinova:raw_goat_meat"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "rinova:smelting/cooked_goat_meat"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_raw_goat_meat",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "rinova:smelting/cooked_goat_meat"
+    ]
+  },
+  "sends_telemetry_event": false
+}

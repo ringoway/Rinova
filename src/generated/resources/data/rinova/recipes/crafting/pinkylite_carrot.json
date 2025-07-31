@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "c": {
+      "item": "minecraft:golden_carrot"
+    },
+    "p": {
+      "item": "rinova:pinkylite_crystal_fragment"
+    }
+  },
+  "pattern": [
+    "ppp",
+    "pcp",
+    "ppp"
+  ],
+  "result": {
+    "item": "rinova:pinkylite_carrot"
+  },
+  "show_notification": true
+}

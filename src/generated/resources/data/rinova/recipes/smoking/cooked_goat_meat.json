@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:smoking",
+  "category": "food",
+  "cookingtime": 100,
+  "experience": 0.35,
+  "ingredient": {
+    "item": "rinova:raw_goat_meat"
+  },
+  "result": "rinova:cooked_goat_meat"
+}

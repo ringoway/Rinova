@@ -5,6 +5,7 @@ import com.ringo.rinova.common.loot.AddItemModifier;
 import com.ringo.rinova.core.registry.RItems;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.level.storage.loot.predicates.LootItemCondition;
 import net.minecraft.world.level.storage.loot.predicates.LootItemKilledByPlayerCondition;
 import net.minecraftforge.common.data.GlobalLootModifierProvider;
@@ -39,6 +40,16 @@ public class RGlobalLootModifiersProvider extends GlobalLootModifierProvider {
                                 LootItemKilledByPlayerCondition.killedByPlayer().build()
                         },
                         RItems.HEART_WITHER.get()
+                )
+        );
+
+        // Мясо козы с козы
+        add("raw_goat_meat_from_goat",
+                new AddItemModifier(
+                        new LootItemCondition[] {
+                                LootTableIdCondition.builder(EntityType.GOAT.getDefaultLootTable()).build()
+                        },
+                        RItems.RAW_GOAT_MEAT.get()
                 )
         );
     }

@@ -6,7 +6,6 @@ import com.ringo.rinova.core.registry.RItems;
 import net.minecraft.data.PackOutput;
 
 public class RRussianLangProvider extends RLangProvider {
-
     public RRussianLangProvider(PackOutput output) {
         super(output, RinovaMod.MOD_ID, "ru_ru");
     }
@@ -18,9 +17,15 @@ public class RRussianLangProvider extends RLangProvider {
 
         // Предметы
         addItem(RItems.PINKYLITE_CRYSTAL, "Пинкилитовый кристалл");
+        addItem(RItems.PINKYLITE_CRYSTAL_FRAGMENT, "Осколок пинкилитового кристалла");
         addItem(RItems.VULTAN_RODS, "Вултановый стержень");
         addItem(RItems.HELL_BRUSH, "Адская кисточка");
         addItem(RItems.CRYSTAL_GRACE, "Кристалл благодати");
+
+        //Еда
+        addItem(RItems.RAW_GOAT_MEAT, "Сырая козлятина");
+        addItem(RItems.COOKED_GOAT_MEAT, "Жареная козлятина");
+        addItem(RItems.PINKYLITE_CARROT, "Пинкилитовая морковь");
         addItem(RItems.HEART_WITHER, "Сердце Иссушителя");
 
         // Предмет с подсказкой

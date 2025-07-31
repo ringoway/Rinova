@@ -7,6 +7,7 @@ import com.ringo.rinova.core.registry.RItems;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.AbstractCookingRecipe;
 import net.minecraft.world.item.crafting.Ingredient;
@@ -78,6 +79,16 @@ public class RRecipeProvider extends RecipeProvider {
                 .save(writer, ResourceLocation.fromNamespaceAndPath(
                         RinovaMod.MOD_ID, "crafting/" + getItemName(RBlocks.SPRING_TRAP.get())));
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, RItems.PINKYLITE_CARROT.get(), 1)
+                .pattern("ppp")
+                .pattern("pcp")
+                .pattern("ppp")
+                .define('p', RItems.PINKYLITE_CRYSTAL_FRAGMENT.get())
+                .define('c', Items.GOLDEN_CARROT)
+                .unlockedBy(getHasName(RItems.PINKYLITE_CRYSTAL_FRAGMENT.get()), has(RItems.PINKYLITE_CRYSTAL_FRAGMENT.get()))
+                .save(writer, ResourceLocation.fromNamespaceAndPath(
+                        RinovaMod.MOD_ID, "crafting/" + getItemName(RItems.PINKYLITE_CARROT.get())));
+
         SimpleCookingRecipeBuilder.smelting( //билдер для создания плавки
                 Ingredient.of(RBlocks.PINKYLITE_ORE.get(), RBlocks.DEEPSLATE_PINKYLITE_ORE.get()), //входящие ингредиенты
                         RecipeCategory.MISC,
@@ -87,7 +98,38 @@ public class RRecipeProvider extends RecipeProvider {
                 .save(writer, ResourceLocation.fromNamespaceAndPath(
                         RinovaMod.MOD_ID, "smelting/" + getItemName(RItems.PINKYLITE_CRYSTAL.get())));
 
+        foodCooking(writer, RItems.RAW_GOAT_MEAT.get(), RItems.COOKED_GOAT_MEAT.get()); // Супер удобно!
+
         compat(writer, RItems.PINKYLITE_CRYSTAL.get(), RBlocks.PINKYLITE_CRYSTAL_BLOCK.get());
+        compat(writer, RItems.PINKYLITE_CRYSTAL_FRAGMENT.get(), RItems.PINKYLITE_CRYSTAL.get());
+    }
+    protected static void foodCooking(Consumer<FinishedRecipe> writer, Item input, Item result) {
+        SimpleCookingRecipeBuilder.smelting(
+                        Ingredient.of(input),
+                        RecipeCategory.FOOD,
+                        result,
+                        0.35F, 200)
+                .unlockedBy("has_" + getItemName(input), has(input))
+                .save(writer, ResourceLocation.fromNamespaceAndPath(
+                        RinovaMod.MOD_ID, "smelting/" + getItemName(result)));
+
+        SimpleCookingRecipeBuilder.smoking(
+                        Ingredient.of(input),
+                        RecipeCategory.FOOD,
+                        result,
+                        0.35F, 100)
+                .unlockedBy("has_" + getItemName(input), has(input))
+                .save(writer, ResourceLocation.fromNamespaceAndPath(
+                        RinovaMod.MOD_ID, "smoking/" + getItemName(result)));
+
+        SimpleCookingRecipeBuilder.campfireCooking(
+                        Ingredient.of(input),
+                        RecipeCategory.FOOD,
+                        result,
+                        0.35F, 600)
+                .unlockedBy("has_" + getItemName(input), has(input))
+                .save(writer, ResourceLocation.fromNamespaceAndPath(
+                        RinovaMod.MOD_ID, "campfire_cooking/" + getItemName(result)));
     }
 
     protected static void compat(Consumer<FinishedRecipe> consumer, ItemLike input, ItemLike result) {

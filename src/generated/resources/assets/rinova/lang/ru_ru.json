@@ -5,12 +5,16 @@
   "block.rinova.pinkylite_ore": "Пинкилитовая руда",
   "block.rinova.spring_trap": "Пружинная ловушка",
   "creative_tab.rinova.tab": "Rinova",
+  "item.rinova.cooked_goat_meat": "Жареная козлятина",
   "item.rinova.crystal_of_grace": "Кристалл благодати",
   "item.rinova.heart_wither": "Сердце Иссушителя",
   "item.rinova.hell_brush": "Адская кисточка",
+  "item.rinova.pinkylite_carrot": "Пинкилитовая морковь",
   "item.rinova.pinkylite_crystal": "Пинкилитовый кристалл",
+  "item.rinova.pinkylite_crystal_fragment": "Осколок пинкилитового кристалла",
   "item.rinova.pinkylite_stuff": "Пинкилитовый посох",
   "item.rinova.pinkylite_stuff.tooltip": "Магия регенерации",
   "item.rinova.pinkylite_stuff.tooltip.charges": "Заряды: %d",
+  "item.rinova.raw_goat_meat": "Сырая козлятина",
   "item.rinova.vultan_rods": "Вултановый стержень"
 }
