@@ -3,6 +3,7 @@ package com.ringo.rinova.core.registry;
 import com.ringo.rinova.RinovaMod;
 import com.ringo.rinova.common.food.RFoods;
 import com.ringo.rinova.common.item.CrystalGraceItem;
+import com.ringo.rinova.common.item.FuelItem;
 import com.ringo.rinova.common.item.HellBrushItem;
 import com.ringo.rinova.common.item.PinkiliteStaffItem;
 import net.minecraft.world.effect.MobEffectInstance;
@@ -21,7 +22,8 @@ public class RItems {
 
     public static final RegistryObject<Item> PINKYLITE_CRYSTAL = registerSimpleItem("pinkylite_crystal");
     public static final RegistryObject<Item> PINKYLITE_CRYSTAL_FRAGMENT = registerSimpleItem("pinkylite_crystal_fragment");
-    public static final RegistryObject<Item> VULTAN_RODS = registerSimpleItem("vultan_rods");
+    public static final RegistryObject<Item> VULTAN_RODS = registerItem("vultan_rods",
+            () -> new FuelItem(new Item.Properties(), 4000));
     public static final RegistryObject<Item> PINKYLITE_STUFF = registerItem("pinkylite_stuff",
             () -> new PinkiliteStaffItem(new Item.Properties()));
     public static final RegistryObject<Item> HELL_BRUSH = registerItem("hell_brush",
