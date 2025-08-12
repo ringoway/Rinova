@@ -29,6 +29,12 @@ public class RItemModelProvider extends ItemModelProvider {
         basicItem(RItems.COOKED_GOAT_MEAT.get());
         basicItem(RItems.PINKYLITE_CARROT.get());
         basicItem(RItems.HEART_WITHER.get());
+
+        handheldItem(RItems.PINKYLITE_SWORD);
+        handheldItem(RItems.PINKYLITE_PICKAXE);
+        handheldItem(RItems.PINKYLITE_AXE);
+        handheldItem(RItems.PINKYLITE_SHOVEL);
+        handheldItem(RItems.PINKYLITE_HOE);
     }
 
     private ItemModelBuilder handheldItem(RegistryObject<Item> item) {

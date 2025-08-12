@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "p": {
+      "item": "rinova:pinkylite_crystal"
+    },
+    "v": {
+      "item": "rinova:vultan_rods"
+    }
+  },
+  "pattern": [
+    " pp",
+    " vp",
+    " v "
+  ],
+  "result": {
+    "item": "rinova:pinkylite_axe"
+  },
+  "show_notification": true
+}

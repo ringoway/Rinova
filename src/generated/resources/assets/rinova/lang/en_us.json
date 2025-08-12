@@ -9,12 +9,17 @@
   "item.rinova.crystal_of_grace": "Crystal of grace",
   "item.rinova.heart_wither": "Heart of the Wither",
   "item.rinova.hell_brush": "Hell brush",
+  "item.rinova.pinkylite_axe": "Pinkylite axe",
   "item.rinova.pinkylite_carrot": "Pinkylite carrot",
   "item.rinova.pinkylite_crystal": "Pinkylite crystal",
   "item.rinova.pinkylite_crystal_fragment": "Pinkylite crystal fragment",
+  "item.rinova.pinkylite_hoe": "Pinkylite how",
+  "item.rinova.pinkylite_pickaxe": "Pinkylite pickaxe",
+  "item.rinova.pinkylite_shovel": "Pinkylite shovel",
   "item.rinova.pinkylite_stuff": "Pinkylite stuff",
   "item.rinova.pinkylite_stuff.tooltip": "Regeneration magic",
   "item.rinova.pinkylite_stuff.tooltip.charges": "Charges: %d",
+  "item.rinova.pinkylite_sword": "Pinkylite sword",
   "item.rinova.raw_goat_meat": "Raw goat meat",
   "item.rinova.vultan_rods": "Vultan rods"
 }
