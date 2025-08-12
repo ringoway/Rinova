@@ -39,5 +39,12 @@ public class REnglishLangProvider extends RLangProvider {
         addBlock(RBlocks.DEEPSLATE_PINKYLITE_ORE, "Deepslate pinkylite ore");
         addBlock(RBlocks.ELEMENTAL_TRAP, "Elemental trap");
         addBlock(RBlocks.SPRING_TRAP, "Spring trap");
+
+        // Инструменты
+        addItem(RItems.PINKYLITE_SWORD, "Pinkylite sword");
+        addItem(RItems.PINKYLITE_PICKAXE, "Pinkylite pickaxe");
+        addItem(RItems.PINKYLITE_AXE, "Pinkylite axe");
+        addItem(RItems.PINKYLITE_SHOVEL, "Pinkylite shovel");
+        addItem(RItems.PINKYLITE_HOE, "Pinkylite how");
     }
 }

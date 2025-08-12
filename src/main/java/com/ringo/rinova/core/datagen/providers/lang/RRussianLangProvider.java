@@ -39,5 +39,12 @@ public class RRussianLangProvider extends RLangProvider {
         addBlock(RBlocks.DEEPSLATE_PINKYLITE_ORE, "Глубинная пинкилитовая руда");
         addBlock(RBlocks.ELEMENTAL_TRAP, "Элементальная ловушка");
         addBlock(RBlocks.SPRING_TRAP, "Пружинная ловушка");
+
+        // Инструменты
+        addItem(RItems.PINKYLITE_SWORD, "Пинкилитовый меч");
+        addItem(RItems.PINKYLITE_PICKAXE, "Пинкилитовая кирка");
+        addItem(RItems.PINKYLITE_AXE, "Пинкилитовый топор");
+        addItem(RItems.PINKYLITE_SHOVEL, "Пинкилитовая лопата");
+        addItem(RItems.PINKYLITE_HOE, "Пинкилитовая мотыга");
     }
 }
