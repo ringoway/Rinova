@@ -10,9 +10,9 @@
     }
   },
   "pattern": [
-    " pp",
-    " vp",
-    " v "
+    "pp",
+    "vp",
+    "v "
   ],
   "result": {
     "item": "rinova:pinkylite_axe"

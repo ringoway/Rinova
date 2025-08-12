@@ -10,9 +10,9 @@
     }
   },
   "pattern": [
-    " p ",
-    " p ",
-    " v "
+    "p",
+    "p",
+    "v"
   ],
   "result": {
     "item": "rinova:pinkylite_sword"

@@ -10,9 +10,9 @@
     }
   },
   "pattern": [
-    " pp",
-    " v ",
-    " v "
+    "pp",
+    "v ",
+    "v "
   ],
   "result": {
     "item": "rinova:pinkylite_hoe"

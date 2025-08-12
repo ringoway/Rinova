@@ -10,9 +10,9 @@
     }
   },
   "pattern": [
-    " p ",
-    " v ",
-    " v "
+    "p",
+    "v",
+    "v"
   ],
   "result": {
     "item": "rinova:pinkylite_shovel"
