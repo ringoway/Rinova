@@ -1,5 +1,6 @@
 package com.ringo.rinova.common.item;
 
+import com.ringo.rinova.core.registry.other.RRarities;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.effect.MobEffect;
@@ -25,7 +26,11 @@ public class CrystalGraceItem extends Item {
     public CrystalGraceItem(Properties properties) {
         super(properties
                 .stacksTo(1)
-                .rarity(Rarity.EPIC));
+                .rarity(RRarities.RAINBOW));
+    }
+    @Override
+    public boolean isFoil(ItemStack stack) {
+        return true;
     }
 
     @Override

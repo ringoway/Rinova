@@ -1,5 +1,6 @@
 package com.ringo.rinova.common.item;
 
+import com.ringo.rinova.core.registry.other.RRarities;
 import com.ringo.rinova.core.tags.RBlockTags;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.particles.ParticleTypes;
@@ -21,7 +22,7 @@ public class HellBrushItem extends Item {
         super(properties
                 .stacksTo(1)
                 .durability(300)
-                .rarity(Rarity.RARE)
+                .rarity(RRarities.AMBER)
         );
     }
 
