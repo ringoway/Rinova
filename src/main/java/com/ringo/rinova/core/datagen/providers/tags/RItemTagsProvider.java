@@ -1,9 +1,11 @@
 package com.ringo.rinova.core.datagen.providers.tags;
 
 import com.ringo.rinova.RinovaMod;
+import com.ringo.rinova.core.registry.RItems;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.ItemTagsProvider;
+import net.minecraft.tags.ItemTags;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import org.jetbrains.annotations.Nullable;
@@ -20,6 +22,12 @@ public class RItemTagsProvider extends ItemTagsProvider {
 
     @Override
     protected void addTags(HolderLookup.Provider provider) {
-
+        this.tag(ItemTags.TRIMMABLE_ARMOR)
+                .add(
+                        RItems.PINKYLITE_HELMET.get(),
+                        RItems.PINKYLITE_CHESTPLATE.get(),
+                        RItems.PINKYLITE_LEGGINGS.get(),
+                        RItems.PINKYLITE_BOOTS.get() 
+                );
     }
 }

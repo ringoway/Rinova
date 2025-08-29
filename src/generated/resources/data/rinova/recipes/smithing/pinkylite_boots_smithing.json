@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "rinova:pinkylite_crystal_block"
+  },
+  "base": {
+    "item": "minecraft:diamond_boots"
+  },
+  "result": {
+    "item": "rinova:pinkylite_boots"
+  },
+  "template": {
+    "item": "rinova:pinkylite_upgrade_smithing_template"
+  }
+}

@@ -34,4 +34,19 @@ public abstract class RLangProvider extends LanguageProvider {
     protected String getItemPath(ItemLike item) {
         return Objects.requireNonNull(ForgeRegistries.ITEMS.getKey(item.asItem())).getPath();
     }
+    protected void addSmithingTemplate(ItemLike item,
+                                       String templateName,
+                                       String appliesTo,
+                                       String ingredients,
+                                       String baseSlotDescription,
+                                       String additionsSlotDescription) {
+        String path = getItemPath(item);
+        String prefix = "item." + modId + "." + path;
+
+        add(prefix, templateName); // Название самого шаблона
+        add(prefix + ".applies_to", appliesTo);
+        add(prefix + ".ingredients", ingredients);
+        add(prefix + ".base_slot_description", baseSlotDescription);
+        add(prefix + ".additions_slot_description", additionsSlotDescription);
+    }
 }

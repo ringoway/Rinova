@@ -46,5 +46,18 @@ public class REnglishLangProvider extends RLangProvider {
         addItem(RItems.PINKYLITE_AXE, "Pinkylite axe");
         addItem(RItems.PINKYLITE_SHOVEL, "Pinkylite shovel");
         addItem(RItems.PINKYLITE_HOE, "Pinkylite how");
+
+        // Броня и шаблон
+        addItem(RItems.PINKYLITE_HELMET, "Pinkylite helmet");
+        addItem(RItems.PINKYLITE_CHESTPLATE, "Pinkylite chestplate");
+        addItem(RItems.PINKYLITE_LEGGINGS, "Pinkylite leggings");
+        addItem(RItems.PINKYLITE_BOOTS, "Pinkylite boots");
+
+        addSmithingTemplate(RItems.PINKYLITE_UPGRADE_SMITHING_TEMPLATE.get(),
+                "Pinkylite Upgrade",
+                "Diamond Equipment",
+                "Pinkylite Crystal Block",
+                "Add diamond armor, weapon or tool",
+                "Add Pinkylite Crystal Block");
     }
 }

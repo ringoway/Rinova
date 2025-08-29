@@ -109,6 +109,15 @@ public class RRecipeProvider extends RecipeProvider {
                 RItems.PINKYLITE_AXE.get(),
                 RItems.PINKYLITE_SHOVEL.get(),
                 RItems.PINKYLITE_HOE.get());
+
+        templateSmithing(writer, Items.DIAMOND_HELMET, RItems.PINKYLITE_UPGRADE_SMITHING_TEMPLATE.get(),
+                RBlocks.PINKYLITE_CRYSTAL_BLOCK.get(), RItems.PINKYLITE_HELMET.get());
+        templateSmithing(writer, Items.DIAMOND_CHESTPLATE, RItems.PINKYLITE_UPGRADE_SMITHING_TEMPLATE.get(),
+                RBlocks.PINKYLITE_CRYSTAL_BLOCK.get(), RItems.PINKYLITE_CHESTPLATE.get());
+        templateSmithing(writer, Items.DIAMOND_LEGGINGS, RItems.PINKYLITE_UPGRADE_SMITHING_TEMPLATE.get(),
+                RBlocks.PINKYLITE_CRYSTAL_BLOCK.get(), RItems.PINKYLITE_LEGGINGS.get());
+        templateSmithing(writer, Items.DIAMOND_BOOTS, RItems.PINKYLITE_UPGRADE_SMITHING_TEMPLATE.get(),
+                RBlocks.PINKYLITE_CRYSTAL_BLOCK.get(), RItems.PINKYLITE_BOOTS.get());
     }
     protected static void foodCooking(Consumer<FinishedRecipe> writer, Item input, Item result) {
         SimpleCookingRecipeBuilder.smelting(
@@ -209,5 +218,20 @@ public class RRecipeProvider extends RecipeProvider {
                 .unlockedBy(getHasName(baseMaterial), has(baseMaterial))
                 .save(consumer, ResourceLocation.fromNamespaceAndPath(
                         RinovaMod.MOD_ID, "crafting/" + getItemName(hoe)));
+    }
+
+    public static void templateSmithing(Consumer<FinishedRecipe> consumer,
+                                         ItemLike armor,
+                                         ItemLike template,
+                                         ItemLike additionMaterial,
+                                         Item resultArmor) {
+        SmithingTransformRecipeBuilder.smithing(
+                        Ingredient.of(template),
+                        Ingredient.of(armor),
+                        Ingredient.of(additionMaterial),
+                        RecipeCategory.TOOLS, resultArmor)
+                .unlocks(getHasName(additionMaterial), has(additionMaterial))
+                .save(consumer, ResourceLocation.fromNamespaceAndPath(
+                        RinovaMod.MOD_ID, "smithing/" + getItemName(resultArmor) + "_smithing"));
     }
 }
