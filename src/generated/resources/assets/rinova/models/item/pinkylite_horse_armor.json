@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "rinova:item/pinkylite_horse_armor"
+  }
+}

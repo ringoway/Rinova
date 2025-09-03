@@ -48,6 +48,7 @@ public class RRussianLangProvider extends RLangProvider {
         addItem(RItems.PINKYLITE_HOE, "Пинкилитовая мотыга");
 
         // Броня и шаблон
+        addItem(RItems.PINKYLITE_HORSE_ARMOR, "Пинкилитовая конская броня");
         addItem(RItems.PINKYLITE_HELMET, "Пинкилитовый шлем");
         addItem(RItems.PINKYLITE_CHESTPLATE, "Пинкилитовый нагрудник");
         addItem(RItems.PINKYLITE_LEGGINGS, "Пинкилитовые поножи");
