@@ -64,6 +64,7 @@ public class RItemModelProvider extends ItemModelProvider {
         trimmedArmorItem(RItems.PINKYLITE_CHESTPLATE);
         trimmedArmorItem(RItems.PINKYLITE_LEGGINGS);
         trimmedArmorItem(RItems.PINKYLITE_BOOTS);
+        basicItem(RItems.PINKYLITE_HORSE_ARMOR.get());
     }
 
     private ItemModelBuilder handheldItem(RegistryObject<Item> item) {

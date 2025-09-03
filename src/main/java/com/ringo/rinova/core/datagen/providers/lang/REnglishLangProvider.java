@@ -48,6 +48,7 @@ public class REnglishLangProvider extends RLangProvider {
         addItem(RItems.PINKYLITE_HOE, "Pinkylite how");
 
         // Броня и шаблон
+        addItem(RItems.PINKYLITE_HORSE_ARMOR, "Pinkylite horse armor");
         addItem(RItems.PINKYLITE_HELMET, "Pinkylite helmet");
         addItem(RItems.PINKYLITE_CHESTPLATE, "Pinkylite chestplate");
         addItem(RItems.PINKYLITE_LEGGINGS, "Pinkylite leggings");

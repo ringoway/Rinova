@@ -6,6 +6,7 @@ import com.ringo.rinova.common.item.*;
 import com.ringo.rinova.core.registry.other.RArmorMaterials;
 import com.ringo.rinova.core.registry.other.RRarities;
 import com.ringo.rinova.core.registry.other.RToolTiers;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.*;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -49,6 +50,8 @@ public class RItems {
             () -> new HoeItem(RToolTiers.PINKYLITE_CRYSTAL, -3, 0.0F, new Item.Properties()));
     public static final RegistryObject<Item> PINKYLITE_UPGRADE_SMITHING_TEMPLATE =
             registerTemplateItem("pinkylite_upgrade_smithing_template");
+
+    // Armor
     public static final RegistryObject<Item> PINKYLITE_HELMET = registerArmorItem(
             "pinkylite_helmet",
             RArmorMaterials.PINKYLITE,
@@ -76,15 +79,21 @@ public class RItems {
             ArmorItem.Type.BOOTS,
             new Item.Properties().rarity(RRarities.PINK).fireResistant()
     );
+    public static final RegistryObject<Item> PINKYLITE_HORSE_ARMOR = registerItem("pinkylite_horse_armor",
+            () -> new HorseArmorItem(13,
+                    new ResourceLocation(RinovaMod.MOD_ID, "textures/entity/horse/armor/pinkylite_horse_armor.png"),
+                    new Item.Properties().stacksTo(1)));
 
     public static RegistryObject<Item> registerTemplateItem(String id) {
         return ITEMS.register(id, () -> CustomSmithingTemplateItem.createEquipmentUpgradeTemplate(
                 "rinova." + id));
     }
+
     public static RegistryObject<Item> registerArmorItem(String name, RArmorMaterials material,
                                                          ArmorItem.Type type, Item.Properties properties) {
         return ITEMS.register(name, () -> new ArmorItem(material, type, properties));
     }
+
     private static RegistryObject<Item> registerSimpleItem(String id) {
         return ITEMS.register(id, () -> new Item(new Item.Properties()));
     }
@@ -96,6 +105,7 @@ public class RItems {
     private static <T extends Item> RegistryObject<T> registerItem(String id, Supplier<T> item) {
         return ITEMS.register(id, item);
     }
+
     public static void register(IEventBus bus) {
         ITEMS.register(bus);
     }

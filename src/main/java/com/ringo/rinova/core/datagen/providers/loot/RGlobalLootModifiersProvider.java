@@ -8,6 +8,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.level.storage.loot.predicates.LootItemCondition;
 import net.minecraft.world.level.storage.loot.predicates.LootItemKilledByPlayerCondition;
+import net.minecraft.world.level.storage.loot.predicates.LootItemRandomChanceCondition;
 import net.minecraftforge.common.data.GlobalLootModifierProvider;
 import net.minecraftforge.common.loot.LootTableIdCondition;
 
@@ -61,6 +62,18 @@ public class RGlobalLootModifiersProvider extends GlobalLootModifierProvider {
                                 ).build()
                         },
                         RItems.PINKYLITE_UPGRADE_SMITHING_TEMPLATE.get()
+                )
+        );
+
+        add("pinkylite_horse_armor_from_nether_bridge",
+                new AddItemModifier(
+                        new LootItemCondition[] {
+                                LootTableIdCondition.builder(
+                                        new ResourceLocation("minecraft:chests/nether_bridge")
+                                ).build(),
+                                LootItemRandomChanceCondition.randomChance(0.2f).build()
+                        },
+                        RItems.PINKYLITE_HORSE_ARMOR.get()
                 )
         );
     }
