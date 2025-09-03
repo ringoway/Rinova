@@ -2,13 +2,10 @@ package com.ringo.rinova.core.registry;
 
 import com.ringo.rinova.RinovaMod;
 import com.ringo.rinova.common.food.RFoods;
-import com.ringo.rinova.common.item.CrystalGraceItem;
-import com.ringo.rinova.common.item.FuelItem;
-import com.ringo.rinova.common.item.HellBrushItem;
-import com.ringo.rinova.common.item.PinkiliteStaffItem;
+import com.ringo.rinova.common.item.*;
+import com.ringo.rinova.core.registry.other.RArmorMaterials;
+import com.ringo.rinova.core.registry.other.RRarities;
 import com.ringo.rinova.core.registry.other.RToolTiers;
-import net.minecraft.world.effect.MobEffectInstance;
-import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.*;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -50,11 +47,44 @@ public class RItems {
             () -> new ShovelItem(RToolTiers.PINKYLITE_CRYSTAL, 1.5F, -3.0F, new Item.Properties()));
     public static final RegistryObject<Item> PINKYLITE_HOE = registerItem("pinkylite_hoe",
             () -> new HoeItem(RToolTiers.PINKYLITE_CRYSTAL, -3, 0.0F, new Item.Properties()));
+    public static final RegistryObject<Item> PINKYLITE_UPGRADE_SMITHING_TEMPLATE =
+            registerTemplateItem("pinkylite_upgrade_smithing_template");
+    public static final RegistryObject<Item> PINKYLITE_HELMET = registerArmorItem(
+            "pinkylite_helmet",
+            RArmorMaterials.PINKYLITE,
+            ArmorItem.Type.HELMET,
+            new Item.Properties().rarity(RRarities.PINK).fireResistant()
+    );
 
-    private static <T extends Item> RegistryObject<T> registerItem(String id, Supplier<T> item) {
-        return ITEMS.register(id, item);
+    public static final RegistryObject<Item> PINKYLITE_CHESTPLATE = registerArmorItem(
+            "pinkylite_chestplate",
+            RArmorMaterials.PINKYLITE,
+            ArmorItem.Type.CHESTPLATE,
+            new Item.Properties().rarity(RRarities.PINK).fireResistant()
+    );
+
+    public static final RegistryObject<Item> PINKYLITE_LEGGINGS = registerArmorItem(
+            "pinkylite_leggings",
+            RArmorMaterials.PINKYLITE,
+            ArmorItem.Type.LEGGINGS,
+            new Item.Properties().rarity(RRarities.PINK).fireResistant()
+    );
+
+    public static final RegistryObject<Item> PINKYLITE_BOOTS = registerArmorItem(
+            "pinkylite_boots",
+            RArmorMaterials.PINKYLITE,
+            ArmorItem.Type.BOOTS,
+            new Item.Properties().rarity(RRarities.PINK).fireResistant()
+    );
+
+    public static RegistryObject<Item> registerTemplateItem(String id) {
+        return ITEMS.register(id, () -> CustomSmithingTemplateItem.createEquipmentUpgradeTemplate(
+                "rinova." + id));
     }
-
+    public static RegistryObject<Item> registerArmorItem(String name, RArmorMaterials material,
+                                                         ArmorItem.Type type, Item.Properties properties) {
+        return ITEMS.register(name, () -> new ArmorItem(material, type, properties));
+    }
     private static RegistryObject<Item> registerSimpleItem(String id) {
         return ITEMS.register(id, () -> new Item(new Item.Properties()));
     }
@@ -63,6 +93,9 @@ public class RItems {
         return ITEMS.register(id, () -> new Item(new Item.Properties().food(foodProperties)));
     }
 
+    private static <T extends Item> RegistryObject<T> registerItem(String id, Supplier<T> item) {
+        return ITEMS.register(id, item);
+    }
     public static void register(IEventBus bus) {
         ITEMS.register(bus);
     }

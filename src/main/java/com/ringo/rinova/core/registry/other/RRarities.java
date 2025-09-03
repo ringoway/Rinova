@@ -8,6 +8,8 @@ import java.awt.*;
 public class RRarities {
     public static final Rarity AMBER = Rarity.create("amber",
             style -> style.withColor(TextColor.parseColor("#FFAF00")));
+    public static final Rarity PINK = Rarity.create("pink",
+            style -> style.withColor(TextColor.parseColor("#FFC0CB")));
     public static final Rarity RAINBOW = Rarity.create("rainbow", style -> {
         float hue = (System.currentTimeMillis() % 10000L) / 10000.0f;
         int rgb = Color.HSBtoRGB(hue, 1.0f, 1.0f);

@@ -34,7 +34,7 @@ public class RRussianLangProvider extends RLangProvider {
         addTooltipWithKey("item.rinova.pinkylite_stuff", "charges", "Заряды: %d");
 
         // Блоки
-        addBlock(RBlocks.PINKYLITE_CRYSTAL_BLOCK, "Пинкилитовый кристалльный блок");
+        addBlock(RBlocks.PINKYLITE_CRYSTAL_BLOCK, "Пинкилитовый кристальный блок");
         addBlock(RBlocks.PINKYLITE_ORE, "Пинкилитовая руда");
         addBlock(RBlocks.DEEPSLATE_PINKYLITE_ORE, "Глубинная пинкилитовая руда");
         addBlock(RBlocks.ELEMENTAL_TRAP, "Элементальная ловушка");
@@ -46,5 +46,18 @@ public class RRussianLangProvider extends RLangProvider {
         addItem(RItems.PINKYLITE_AXE, "Пинкилитовый топор");
         addItem(RItems.PINKYLITE_SHOVEL, "Пинкилитовая лопата");
         addItem(RItems.PINKYLITE_HOE, "Пинкилитовая мотыга");
+
+        // Броня и шаблон
+        addItem(RItems.PINKYLITE_HELMET, "Пинкилитовый шлем");
+        addItem(RItems.PINKYLITE_CHESTPLATE, "Пинкилитовый нагрудник");
+        addItem(RItems.PINKYLITE_LEGGINGS, "Пинкилитовые поножи");
+        addItem(RItems.PINKYLITE_BOOTS, "Пинкилитовые ботинки");
+
+        addSmithingTemplate(RItems.PINKYLITE_UPGRADE_SMITHING_TEMPLATE.get(),
+                "Пинкилитовое улучшение",
+                "Алмазная экипировка",
+                "Пинкилитовый кристальный блок",
+                "Добавьте алмазную броню, оружие или инструмент",
+                "Добавьте Пинкилитовый кристальный блок");
     }
 }

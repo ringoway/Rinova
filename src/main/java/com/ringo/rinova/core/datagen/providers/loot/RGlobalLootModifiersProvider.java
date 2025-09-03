@@ -52,5 +52,16 @@ public class RGlobalLootModifiersProvider extends GlobalLootModifierProvider {
                         RItems.RAW_GOAT_MEAT.get()
                 )
         );
+
+        add("pinkylite_template_from_stronghold_library",
+                new AddItemModifier(
+                        new LootItemCondition[] {
+                                LootTableIdCondition.builder(
+                                        new ResourceLocation("minecraft:chests/stronghold_library")
+                                ).build()
+                        },
+                        RItems.PINKYLITE_UPGRADE_SMITHING_TEMPLATE.get()
+                )
+        );
     }
 }
