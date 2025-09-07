@@ -3,6 +3,7 @@ package com.ringo.rinova.core.registry;
 import com.ringo.rinova.RinovaMod;
 import com.ringo.rinova.common.food.RFoods;
 import com.ringo.rinova.common.item.*;
+import com.ringo.rinova.common.item.armor.EffectArmorItem;
 import com.ringo.rinova.core.registry.other.RArmorMaterials;
 import com.ringo.rinova.core.registry.other.RRarities;
 import com.ringo.rinova.core.registry.other.RToolTiers;
@@ -52,28 +53,28 @@ public class RItems {
             registerTemplateItem("pinkylite_upgrade_smithing_template");
 
     // Armor
-    public static final RegistryObject<Item> PINKYLITE_HELMET = registerArmorItem(
+    public static final RegistryObject<Item> PINKYLITE_HELMET = registerEffectArmorItem(
             "pinkylite_helmet",
             RArmorMaterials.PINKYLITE,
             ArmorItem.Type.HELMET,
             new Item.Properties().rarity(RRarities.PINK).fireResistant()
     );
 
-    public static final RegistryObject<Item> PINKYLITE_CHESTPLATE = registerArmorItem(
+    public static final RegistryObject<Item> PINKYLITE_CHESTPLATE = registerEffectArmorItem(
             "pinkylite_chestplate",
             RArmorMaterials.PINKYLITE,
             ArmorItem.Type.CHESTPLATE,
             new Item.Properties().rarity(RRarities.PINK).fireResistant()
     );
 
-    public static final RegistryObject<Item> PINKYLITE_LEGGINGS = registerArmorItem(
+    public static final RegistryObject<Item> PINKYLITE_LEGGINGS = registerEffectArmorItem(
             "pinkylite_leggings",
             RArmorMaterials.PINKYLITE,
             ArmorItem.Type.LEGGINGS,
             new Item.Properties().rarity(RRarities.PINK).fireResistant()
     );
 
-    public static final RegistryObject<Item> PINKYLITE_BOOTS = registerArmorItem(
+    public static final RegistryObject<Item> PINKYLITE_BOOTS = registerEffectArmorItem(
             "pinkylite_boots",
             RArmorMaterials.PINKYLITE,
             ArmorItem.Type.BOOTS,
@@ -87,6 +88,11 @@ public class RItems {
     public static RegistryObject<Item> registerTemplateItem(String id) {
         return ITEMS.register(id, () -> CustomSmithingTemplateItem.createEquipmentUpgradeTemplate(
                 "rinova." + id));
+    }
+
+    public static RegistryObject<Item> registerEffectArmorItem(String name, RArmorMaterials material,
+                                                         ArmorItem.Type type, Item.Properties properties) {
+        return ITEMS.register(name, () -> new EffectArmorItem(material, type, properties));
     }
 
     public static RegistryObject<Item> registerArmorItem(String name, RArmorMaterials material,
