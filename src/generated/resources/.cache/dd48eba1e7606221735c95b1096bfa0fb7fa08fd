@@ -1,6 +1,0 @@
-// 1.20.1	2025-08-12T20:37:40.5084639	Tags for minecraft:block mod id rinova
-7f9bce4977273710a66da4be537cdcb88b0e2425 data/forge/tags/blocks/needs_netherite_tool.json
-ffb6cf37812f65d8ecb0ff7df8f9ec8ef1f04047 data/minecraft/tags/blocks/mineable/pickaxe.json
-c48ca562bf6522fe48226a9c4dd77132c41df01b data/minecraft/tags/blocks/needs_diamond_tool.json
-f264f13db4981b844186968afa3934b42a1bb3d7 data/minecraft/tags/blocks/needs_iron_tool.json
-9e5b271f0c7ec4847dded614168452fd660518de data/rinova/tags/blocks/stone_rocks.json

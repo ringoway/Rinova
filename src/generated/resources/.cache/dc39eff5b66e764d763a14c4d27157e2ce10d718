@@ -1,7 +1,0 @@
-// 1.20.1	2025-09-03T22:47:57.3770162	Global Loot Modifiers : rinova
-10bea4c260b4de696eaaac1fe0030f5ab4a5f19c data/forge/loot_modifiers/global_loot_modifiers.json
-d61487146e5f360fcd4c85232b0ef0001c0b960f data/rinova/loot_modifiers/hell_brush_from_bastion.json
-61fdb51a08d5290b57958bf6bf50928681545e62 data/rinova/loot_modifiers/pinkylite_horse_armor_from_nether_bridge.json
-6e0447a53b362e03298654d631ef371c10408c57 data/rinova/loot_modifiers/pinkylite_template_from_stronghold_library.json
-00ce9c4b0310b8ebd5de969e7890146f3bac5928 data/rinova/loot_modifiers/raw_goat_meat_from_goat.json
-09a1e415e261919f09d5877f04e02cbfb40fdddb data/rinova/loot_modifiers/wither_heart_from_wither.json

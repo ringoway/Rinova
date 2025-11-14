@@ -1,25 +1,36 @@
-# eclipse
-bin
-*.launch
-.settings
-.metadata
-.classpath
-.project
+# Gradle
+.gradle/
+build/
+out/
+bin/
 
-# idea
-out
+# IDE
+.idea/
+.vscode/
+*.iml
 *.ipr
 *.iws
-*.iml
-.idea
+.project
+.classpath
+.settings/
 
-# gradle
-build
-.gradle
+# Runtime directories
+run/
+run-data/
 
-# other
-eclipse
-run
+# Generated resources cache
+src/generated/resources/.cache/
 
-# Files from Forge MDK
-forge*changelog.txt
+# Logs
+*.log
+logs/
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Temporary files
+*.tmp
+*.bak
+*~
